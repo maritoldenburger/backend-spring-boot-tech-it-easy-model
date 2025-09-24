@@ -13,8 +13,8 @@ public class TelevisionController {
     private List<String> televisionDataBase = new ArrayList<>();
 
     @GetMapping
-    public ResponseEntity<String> getAllTelevisions() {
-        return ResponseEntity.ok("All televisions");
+    public ResponseEntity<List<String>> getAllTelevisions() {
+        return ResponseEntity.ok(televisionDataBase);
     }
 
     @GetMapping("/{id}")
